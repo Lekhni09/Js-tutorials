@@ -1,0 +1,38 @@
+
+location object contains url of the current url .it is accessed through the window.location property 
+window location href-> returns the url of the current page 
+window location Hostname-> returns name of the internet host (of the current page )
+window location pathname-> returns pathname of the current page 
+window location protocol-> returns web protocol of the page 
+window.location assign-> this method loads a new document 
+
+
+
+
+
+<html>
+    <head>
+        <title>
+            </title>
+    </head>
+    <body>
+
+        <button onclick="myfun()">click here</button>
+        
+        <script type="text/javascript">
+
+  
+        document.write(window.location.href);                   // rest of the commands work on console 
+        document.write(window.location.hostname);
+
+        function myfun(){
+            window.location.assign("www.facebook.com");
+        }
+            
+
+        
+        </script>
+     
+
+    </body>
+</html>

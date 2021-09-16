@@ -1,0 +1,45 @@
+
+js interaction with html is handled through events that occur when user or browser manipulates a page 
+
+Events are part of DOM level 3 and html element -> set of events which trigger js code
+var d  = new Date();
+by default js will use browser time zone and display date 
+
+getFullYear() ->get year yyyy
+getMonth()-> (0-11)
+getDate()->get day as a no. 
+
+setMonth(11) -> to set static date 
+setFullYear(2019, 11, 5)
+setDate()
+
+
+<html>
+    <head>
+        <title>
+            </title>
+    </head>
+    <body>
+
+      
+        
+        <script type="text/javascript">
+
+           var date = new Date();              //always comes in yyyymmdd format 
+         //  document.write(date);
+
+           var date = new Date(2020, 5, 9);              
+        //   document.write(date);
+
+           var month = date.getUTCMonth() + 1;         //takes date by default from 0 so add +1 to it
+           var day = date.getUTCDate();
+           var year = date.getUTCFullYear();
+
+           document.write(year + "/" + month + "/"+ day);
+
+
+        </script>
+     
+
+    </body>
+</html>

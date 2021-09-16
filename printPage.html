@@ -1,0 +1,49 @@
+
+Print specific part of page if we want:
+
+window.print();
+pass id in function parameter to follow particular content 
+
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id ="divone">
+            div one content is as follows
+            <button onclick="myFun()">DivOne</button>
+        </div>
+
+        <div id ="divtwo">
+            div one content is as follows
+            <button onclick="myFun()">divtwo</button>
+        </div>
+
+        <div id ="divthree">
+            div one content is as follows
+            <button onclick="myFun()">DivThree</button>
+        </div>
+
+        <button onclick="myWholePage()">wholePage</button>
+
+
+        <script type="text/javascript">
+
+        function myWholePage(){
+            window.print();
+
+        }
+
+        function myFun(paravalue){                          //paravalue takes the value passed in sepearte divs
+                var test = document.body.innerHTML;
+                var divcontent = document.getElementById(paravalue).innerHTML;
+                document.body.innerHTML = divcontent;
+                window.print();
+                document.body.innerHTML = test;
+        }
+        
+        
+        
+        </script>
+    </body>
+</html>

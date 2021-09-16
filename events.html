@@ -1,0 +1,44 @@
+
+js interaction with html is handled through events that occur when user or browser manipulates a page 
+
+Events are part of DOM level 3 and html element -> set of events which trigger js code
+
+page loads-> events
+
+onclick
+onmousehover and onmouseout
+onkeydown script -> runs when key is pressed
+onkeypress->script runs when key pressed and released
+onkeyup script-> script runs when key is pressed.
+
+
+<html>
+    <head>
+        <title>
+            </title>
+    </head>
+    <body>
+
+        <h1>I love computers more than humans .</h1>
+
+        <button onclick="myfun()">click here</button> 
+
+        <button onmousedown="myfun()"> on mouse down</button>
+        <button onmouseenter="myfun()">mouse enter </button>
+        <button onmouseup="myfun()">mouse up</button>
+        <button onmouseleave="myfun()">mouse leave</button>
+        
+        <script type="text/javascript">
+
+            function myfun(){
+
+                document.body.style.backgroundColor = "#3b5999";
+                document.body.style.color ='white';
+            }
+
+        
+        </script>
+     
+
+    </body>
+</html>

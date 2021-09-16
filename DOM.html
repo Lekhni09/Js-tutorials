@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            </title>
+    </head>
+    <body>
+
+        <p id="test"> web developer</p>
+        <p class="welcome" > jr. developer</p>
+
+        <script type="text/javascript">
+             var a = document.getElementById("test").innerHTML;                    //how to access element by id
+             document.write(a);
+        </script>
+
+
+        <script type="text/javascript">
+            var b = document.getElementsByClassName("welcome")[0].innerHTML;           //how toaccess elements by class name - by index number 
+            document.write(b);
+        </script>
+
+
+
+        <script type="text/javascript">
+              var tag = document.getElementsByTagName("p");
+              document.write(tag);
+              console.log(tag);                                                        // how to access elements by tag name
+        </script>
+
+
+        <script type="text/javascript">
+                    var p = document.querySelector('p').innerHTML;                                  //how to access first elements
+                    document.write(p);
+        </script>
+        
+      
+    </body>
+</html>

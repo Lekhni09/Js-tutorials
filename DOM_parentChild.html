@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            </title>
+    </head>
+    <body>
+        <p id="test" > Web developer</p>
+        <p class="web"> jr. backend developer</p>
+
+        <ul>
+            <li>like</li>
+            <li>share</li>
+            <li>subscribe</li>
+        </ul>
+
+        <script type="text/javascript">
+
+            //access child in a body 
+
+            var child= document.body.children;
+            console.log(child);
+
+            //adding a new child in the body 
+            var hate= document.createElement("p");
+            var texted= document.createTextNode("I love computers more than humans");
+
+            hate.appendChild(texted);
+            console.log(hate);
+
+            document.body.appendChild(hate);
+
+            //access first child and last child 
+            var list= document.querySelector("ul");
+            console.log(list);
+
+            console.log(list.firstChild);
+            console.log(list.lastChild);
+
+        </script>
+        
+
+   
+
+    </body>
+</html>
