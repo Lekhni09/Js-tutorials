@@ -1,0 +1,53 @@
+
+js - collection of named values
+named values in js objects -->properties
+objects sre variables containing variables
+
+js variables-> contain single values
+objects are variables too but objects can contain many values 
+
+
+
+
+<html>
+    <head>
+        <title>
+            </title>
+    </head>
+    <body>
+
+       
+        <script type="text/javascript">
+
+            var love = {
+                firstname: "lekhni",
+                lastname: "chandra",
+                age: 24,
+                profession: "web developer"
+            }
+
+            console.log(love);      // in console properties appear in alphabetical order
+            console.log(love.firstname);            //objectName.propertyName
+
+            //change the property name 
+
+            love.profession = "backend developer";
+            console.log(love.profession);
+
+            //add a new property name
+
+            love.middlename  = "kumar";  //whenever making property inside { } : will be used .
+            console.log(love.middlename);
+
+            //delete property name 
+            delete love.age;
+            console.log(love);
+
+
+
+
+            
+        </script>
+       
+    </body>
+</html>

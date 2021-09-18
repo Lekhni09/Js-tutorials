@@ -1,0 +1,56 @@
+Scope Chain
+-> location where identifiers are declared that is searched to resolve identifiers.
+->execution context  refers to Scope
+->lexical scope  ->in nested grp of functions , inner functions have access to the variable and other resouces of parent scope .
+
+
+<html>
+    <head>
+        <title>
+            </title>
+    </head>
+    <body>
+
+       <script type ="text/javascript">
+
+       var x = "0";
+       var y1 = 'Welcome to hogwarts '; 
+       console.log(x);
+
+       f1();
+       function f1(){
+           var localvarf1=' I love computers more than humans';
+           var y1= 'check your id';
+           console.log(x);
+                        
+                    f2();
+                    
+                    function f2(){
+                    var localvarf2=' I love computers more than humans';
+                    var y2= 'check your id';
+                    console.log(x); 
+
+                        f3();
+                        
+                                function f3(){
+                                var localvarf3=' I love computers more than humans';
+                                var y3= 'check your id';
+                                console.log(x); 
+
+                                }
+                        
+
+                    }
+
+       }
+
+
+
+
+       </script>
+
+        
+     
+
+    </body>
+</html>
