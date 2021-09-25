@@ -1,0 +1,30 @@
+scope chain: used to resolve variables in js.
+scope chain is lexiclly defined -> which scope chain will be looking at the code>
+top of scope chain -> global scope ->window object in the  browser
+
+Lexical Scoping : a function that is lexically within another function gets access to the scope of another function 
+
+inner(child) function can access their parent function variables 
+
+
+<script>
+
+    var a ="hello guys"; //global varible
+
+    function first(){               //parent functn- its execution context 
+        var b ="how are you ";
+        second();   //calling fnctn
+
+            function second(){                  //child function that can access parent fnctn variables
+                var c="how old are you?";
+                console.log(a+b+c);
+                three();
+
+            }
+    }               //parent execution context ends here 
+    function three(){
+        var d="i am a web deveoper";
+        console.log(a+b+c+d);               //shows error cant access above function varibles because it is not in his environemnet or scope 
+    }
+    first();
+    </script>

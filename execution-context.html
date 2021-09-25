@@ -1,0 +1,23 @@
+Hoisting
+
+
+<script>
+
+    console.log("I am a " +job);
+    var job="web developer";
+    console.log("I am a " + job);
+
+    function whoamI(){
+        console.log("i am a " +job);
+        var job="full stack";
+        console.log("i am a"+ job);
+    }
+    whoamI();
+</script>
+
+output:
+
+I am a undefined
+execution-context.html:8 I am a web developer
+execution-context.html:11 i am a undefined
+execution-context.html:13 i am afull stack
