@@ -1,0 +1,30 @@
+callback: way to use js functions . Simply they say call me back . asynchronous(take some time).
+
+<script>
+    const getRollNO = () =>{
+        setTimeout( () => {
+            console.log('API getting roll no');
+            let roll_no = [1,2,3,4,5];
+            console.log(roll_no);
+
+            setTimeout((roll_no) => {
+                const biodata = {
+                    name: 'vinod',
+                    age: 24
+                }
+                console.log (`my roll no is ${rollno}. myname is ${biodata.name} and i am ${biodata.age} yeears old.` );
+
+                setTimeout(name =>{
+                    biodata.gender = 'male';
+                    console.log (`my roll no is ${rollno}. myname is ${biodata.name} and i am ${biodata.age} yeears old. and  I am a alpha ${biodata.gender}` );
+                },3000,biodata.name);
+
+            },3000,roll_no[1]);
+
+
+        }, 3000 );
+
+    }
+    getRollNO();
+ 
+</script>

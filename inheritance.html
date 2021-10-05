@@ -1,0 +1,42 @@
+<script>
+    class Students{
+        constructor(name,age,cls){
+            this.myname = name;    //properties
+            this.myage = age;
+            this.mycls = cls;
+
+        }
+
+        biodata(){   //method of class students
+            console.log(   `hi i am ${this.myname}. I am ${this.myage} years old and i am in ${this.mycls}`);
+        }
+    }
+
+    class Player extends Students{   //in inheritance we use extends keyword to derive properties of parent class
+
+        constructor(name,age,cls,game){
+            super(name,age,cls);  //to share the properties of parent class use this super keyword to inherit
+            this.mygame= game;
+        }
+        // biodata(){   //method of class students
+        //     console.log(   `hi i am ${this.myname}. I am ${this.myage} years old and i am in ${this.mycls} and i play ${this.mygame} .`);
+        // }
+
+        play_biodata(){
+            return(`${super.biodata()}. I play ${this.mygame}`);   //to carry forward the saeme method used above we can use super no need to write again .
+        }
+    }
+    let obj1 = new Player('lekhni','24','btech', 'ludo');
+    //let obj2 = new Player('leko','25','bcs');
+    
+  //  obj1.biodata();
+   // obj2.biodata();
+ //   console.log(obj1);
+  //  obj2.biodata();
+
+   console.log( obj1.play_biodata());
+    
+</script>
+
+
+//inheritance is called deriving properties of parent class into the child class.
